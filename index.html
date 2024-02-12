@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bobith.dev</title>
+    <link href="./index.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1 style="color: white;">Bobith.dev</h1>
+    </header>
+
+    <nav class="desktop-navbar">
+        <button onclick="navigate('home')">Home</button>
+        <div class="dropdown">
+            <button class="projects">Projects</button>
+            <div class="dropdown-content">
+                <a href="./realRoll/dice/diceBox.html" onclick="navigate('diceBox')">Dice Box</a>
+            </div>
+        </div>
+        <button onclick="navigate('about')">About</button>
+        <button onclick="navigate('contact')">Contact</button>
+    </nav>
+
+    <div class="mobile-navbar">
+        <button class="open-sidebar-btn" onclick="toggleSidebar()">☰ Open Sidebar</button>
+    </div>
+
+    <div id="sidebar" class="sidebar">
+        <button class="close-sidebar-btn" onclick="toggleSidebar()">✕ Close Sidebar</button>
+        <button onclick="navigate('home')">Home</button>
+        <div class="dropdown">
+            <button class="projects">Projects</button>
+            <div class="dropdown-content">
+                <a href="./realRoll/dice/diceBox.html" onclick="navigate('diceBox')">Dice Box</a>
+            </div>
+        </div>
+        <button onclick="navigate('about')">About</button>
+        <button onclick="navigate('contact')">Contact</button>
+    </div>
+
+    <main>
+        <h2>Welcome to Bobith.dev!</h2>
+        <p>This is my website!</p>
+    </main>
+
+    <script src="./server.js"></script>
+    <script src="./index.js"></script>
+
+</body>
+</html>

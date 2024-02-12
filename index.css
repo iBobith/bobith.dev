@@ -1,0 +1,228 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #555;
+    padding: 15px;
+}
+
+button {
+    color: white;
+    background-color: #3498db;
+    border: none;
+    padding: 12px 20px;
+    margin: 0 10px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+main {
+    padding: 40px;
+    text-align: center;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+p {
+    color: #555;
+    font-size: 18px;
+}
+
+/* Responsive Styles */
+@media only screen and (max-width: 600px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    button {
+        margin: 10px 0;
+    }
+}
+
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Responsive Styles */
+/* Existing responsive styles */
+
+/* Responsive styles for the modal */
+@media only screen and (max-width: 600px) {
+    .modal-content {
+        width: 90%;
+    }
+}
+
+
+/* nav {
+    display: flex;
+    justify-content: space-between;
+    background-color: #555;
+    padding: 15px;
+} */
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    text-align: left;
+}
+
+.dropbtn {
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    background-color: #555;
+    border: none;
+    padding: 12px 12px;
+    width: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    float: right;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 100px;
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border: none;
+    padding: 2px 2px;
+    margin: 0 8px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 2px;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-content a {
+    color: #555;
+    padding: 12px 12px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.mobile-navbar {
+    display: none;
+    background-color: #555;
+    padding: 15px;
+}
+
+.open-sidebar-btn, .close-sidebar-btn {
+    color: white;
+    background-color: #555;
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    display: none;
+    position: fixed;
+    width: 250px;
+    height: 100%;
+    background-color: #555;
+    padding-top: 20px;
+    color: white;
+}
+
+.sidebar button {
+    width: 100%;
+    padding: 10px;
+    background-color: #555;
+    border: none;
+    color: white;
+    text-align: left;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.sidebar button:hover {
+    background-color: #333;
+}
+
+@media only screen and (max-width: 600px) {
+    /* Hide desktop navbar on mobile */
+    .desktop-navbar {
+        display: none;
+    }
+
+    /* Display mobile navbar with sidebar button on mobile */
+    .mobile-navbar {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    /* Display sidebar when it's opened on mobile */
+    .sidebar {
+        display: block;
+    }
+}
